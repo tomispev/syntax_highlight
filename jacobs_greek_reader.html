@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<style rel="stylesheet" type="text/css">
+
+	@page {	margin: 15mm; }
+	body { margin:  15mm; }
+
+	.greek { 
+		font-size: 1.5em;
+		font-family: "SBL Greek", serif;
+	}
+
+	sub-sec:hover {
+		text-decoration: underline;
+	}
+
+	/* declinable */
+	:where(gr-verb, gr-noun, gr-adj, gr-num):hover {
+		padding-top: 0.5%;
+		padding-bottom: 0.5%;
+		color: white;
+	}
+
+	gr-verb:hover	{ background-color: rgb(192,80,70); }	/* red */
+	gr-noun:hover	{ background-color: rgb(79,129,189); }	/* blue */
+	gr-adj:hover	{ background-color: rgb(75,172,198); }	/* cyan */
+	gr-num:hover	{ background-color: rgb(128,100,162); }	/* purple */
+
+	/* indeclinable */
+	:where(gr-adv, gr-prep, gr-conj, gr-prt):hover {
+		padding-top: 0.5%;
+		padding-bottom: 0.5%;
+		color: black;
+	}
+
+	gr-adv:hover	{ background-color: rgb(214,227,188); }	/* green */
+	gr-prep:hover	{ background-color: rgb(255,255,153); }	/* yellow */
+	gr-conj:hover	{ background-color: rgb(251,212,180); }	/* orange */
+	gr-prt:hover	{ background-color: rgb(217,217,217); }	/* gray */
+
+	/* English translation tooltip */
+	[en-tr]:hover:after {
+	    opacity: 1;
+	    transition: all 0.1s ease 0.2s;
+	    visibility: visible;
+	}
+	[en-tr]:after {
+	    content: attr(en-tr);
+	    background-color: #fff;
+	    color: #000;
+	    position: absolute;
+	    font-size: 0.8em;
+	    padding: 1px 5px 1px 5px;
+	    bottom: -1.5em;
+	    left: 100%;
+	    white-space: nowrap;
+	    box-shadow: 1px 1px 3px #000;
+	    opacity: 0;
+	    border: 1px solid #000;
+	    z-index: 99999;
+	    visibility: hidden;
+	}
+	[en-tr] { position: relative; }
+
+</style>
+<title>A Greek Reader</title>
+</head>
+
+<body>
+<h1>FIRST COURSE</h1>
+<h2>I. First Declension</h2>
+<h3>1.</h3>
+<div class=greek>
+	Ἡ 
+	<gr-noun en-tr="drunkenness">μέθη</gr-noun> 
+	<gr-adj en-tr="short">μικρὰ</gr-adj> 
+	<gr-noun en-tr="insanity">μανία</gr-noun> 
+	<gr-verb en-tr="is">ἐστίν</gr-verb>.
+	<br>
+	<gr-adv en-tr="often">Πολλάκις</gr-adv> 
+	<gr-adj en-tr="short">βραχεῖα</gr-adj> 
+	<gr-noun en-tr="pleasure">ἡδονὴ</gr-noun> 
+	<gr-adj en-tr="long">μακρὰν</gr-adj> 
+	<gr-verb en-tr="begets">τίκτει</gr-verb> 
+	<gr-noun en-tr="pain">λύπην</gr-noun>.
+	<br>
+	<gr-verb en-tr="love">Φίλει</gr-verb> τὴν 
+	<gr-noun en-tr="education">παιδείαν</gr-noun>, 
+	<gr-noun en-tr="temperance">σωφροσύνην</gr-noun>, 
+	<gr-noun en-tr="prudence">φρόνησιν</gr-noun>, 
+	<gr-noun en-tr="truth">ἀλήθειαν</gr-noun>, 
+	<gr-noun en-tr="economy">οἰκονομίαν</gr-noun>, 
+	<gr-noun en-tr="handicraft">τέχνην</gr-noun>, 
+	<gr-noun en-tr="piety">εὐσέβειαν</gr-noun>.
+	<br>
+	<sub-sec>
+		<gr-noun en-tr="Bion">Βίων</gr-noun> 
+		<gr-verb en-tr="used-to-say">ἔλεγε</gr-verb>
+	</sub-sec> 
+	<sub-sec>τὴν 
+		<gr-noun en-tr="avarice">φιλαργυρίαν</gr-noun> 
+		<gr-verb en-tr="was">εἶναι</gr-verb> 
+		<gr-noun en-tr="mother">μητρόπολιν</gr-noun> 
+		<gr-adj en-tr="of all">πάσης</gr-adj> 
+		<gr-noun en-tr="evil">κακίας</gr-noun>.
+	</sub-sec>
+	<br>
+	<gr-prt en-tr="not">Οὐ</gr-prt> 
+	<gr-noun en-tr="want">πενία</gr-noun> 
+	<gr-noun en-tr="grief">λύπην</gr-noun> 
+	<gr-verb en-tr="causes">ἐργάζεται</gr-verb>, 
+	<gr-conj en-tr="but">ἀλλ’</gr-conj> 
+	<gr-noun en-tr="desire">ἐπιθυμία</gr-noun>.
+	<br>
+	<sub-sec>
+		<gr-adv en-tr="as">Ὡς</gr-adv> 
+		<gr-noun en-tr="feast">συμπόσιν</gr-noun> 
+		<gr-prep en-tr="without">χωρὶς</gr-prep> 
+		<gr-noun en-tr="social conversation">ὁμιλίας</gr-noun>,
+	</sub-sec>
+	<sub-sec>
+		<gr-adv en-tr="so">οὕτως</gr-adv> 
+		<gr-noun en-tr="wealth">πλοῦτος</gr-noun> 
+		<gr-prep en-tr="without">χωρὶς</gr-prep> 
+		<gr-noun en-tr="virtue">ἀρετῆς</gr-noun> 
+		<gr-adv en-tr="not any">οὐδὲν</gr-adv> 
+		<gr-noun en-tr="pleasure">ἡδονῆς</gr-noun> 
+		<gr-verb en-tr="has">ἔχει</gr-verb>.
+	</sub-sec>
+</div>
+
+</body>
+</html>
