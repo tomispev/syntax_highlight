@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+<style rel="stylesheet" type="text/css">
+
+	@page {	margin: 15mm; }
+	body { margin:  15mm; }
+
+	.greek { 
+		font-size: 1.5em;
+		font-family: "SBL Greek", serif;
+	}
+
+	/* declinable */
+	:where(gr-verb, gr-noun, gr-adj, gr-num):hover {
+		padding-top: 0.5%;
+		padding-bottom: 0.5%;
+		color: white;
+	}
+	gr-verb:hover	{ background-color: rgb(192,80,70); }	/* red */
+	gr-noun:hover	{ background-color: rgb(79,129,189); }	/* blue */
+	gr-adj:hover	{ background-color: rgb(75,172,198); }	/* cyan */
+	gr-num:hover	{ background-color: rgb(128,100,162); }	/* purple */
+
+	/* indeclinable */
+	:where(gr-adv, gr-prep, gr-conj, gr-prt):hover {
+		padding-top: 0.5%;
+		padding-bottom: 0.5%;
+		color: black;
+	}
+	gr-adv:hover	{ background-color: rgb(214,227,188); }	/* green */
+	gr-prep:hover	{ background-color: rgb(255,255,153); }	/* yellow */
+	gr-conj:hover	{ background-color: rgb(251,212,180); }	/* orange */
+	gr-prt:hover	{ background-color: rgb(217,217,217); }	/* gray */
+
+</style>
+<title>A Greek Reader</title>
+</head>
+
+<body>
+<h1>FIRST COURSE</h1>
+<h2>I. First Declension</h2>
+<h3>1.</h3>
+<div class=greek>
+	Ἡ 
+	<gr-noun>μέθη</gr-noun> 
+	<gr-adj>μικρὰ</gr-adj> 
+	<gr-noun>μανία</gr-noun> 
+	<gr-verb>ἐστίν</gr-verb>.
+	<br>
+	<gr-adv>Πολλάκις</gr-adv> 
+	<gr-adj>βραχεῖα</gr-adj> 
+	<gr-noun>ἡδονὴ</gr-noun> 
+	<gr-adj>μακρὰν</gr-adj> 
+	<gr-verb>τίκτει</gr-verb> 
+	<gr-noun>λύπην</gr-noun>.
+	<br>
+	<gr-verb>Φίλει</gr-verb> τὴν 
+	<gr-noun>παιδείαν</gr-noun>, 
+	<gr-noun>σωφροσύνην</gr-noun>, 
+	<gr-noun>φρόνησιν</gr-noun>, 
+	<gr-noun>ἀλήθειαν</gr-noun>, 
+	<gr-noun>οἰκονομίαν</gr-noun>, 
+	<gr-noun>τέχνην</gr-noun>, 
+	<gr-noun>εὐσέβειαν</gr-noun>.
+	<br>
+	<gr-noun>Βίων</gr-noun> 
+	<gr-verb>ἔλεγε</gr-verb> τὴν 
+	<gr-noun>φιλαργυρίαν</gr-noun> 
+	<gr-verb>εἶναι</gr-verb> 
+	<gr-noun>μητρόπολιν</gr-noun> 
+	<gr-adj>πάσης</gr-adj> 
+	<gr-noun>κακίας</gr-noun>.
+	<br>
+	<gr-prt>Οὐ</gr-prt> 
+	<gr-noun>πενία</gr-noun> 
+	<gr-noun>λύπην</gr-noun> 
+	<gr-verb>ἐργάζεται</gr-verb>, 
+	<gr-conj>ἀλλ’</gr-conj> 
+	<gr-noun>ἐπιθυμία</gr-noun>.
+	<br>
+	<gr-adv>Ὡς</gr-adv> 
+	<gr-noun>συμπόσιν</gr-noun> 
+	<gr-prep>χωρὶς</gr-prep> 
+	<gr-noun>ὁμιλίας</gr-noun>,
+	<gr-adv>οὕτως</gr-adv> 
+	<gr-noun>πλοῦτος</gr-noun> 
+	<gr-prep>χωρὶς</gr-prep> 
+	<gr-noun>ἀρετῆς</gr-noun> 
+	<gr-adv>οὐδὲν</gr-adv> 
+	<gr-noun>ἡδονῆς</gr-noun> 
+	<gr-verb>ἔχει</gr-verb>.
+</div>
+
+</body>
+</html>
