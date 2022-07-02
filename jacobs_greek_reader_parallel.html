@@ -1,96 +1,201 @@
 <!DOCTYPE html>
 <head>
 <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+
+<title>A Greek Reader</title>
+
 <style rel="stylesheet" type="text/css">
 
-	@page {	margin: 15mm; }
-	body { margin:  15mm; }
+	/*@page {	margin: 15mm; }*/
+	body { margin:  5%; }
 
-	.greek { 
-		font-size: 1.5em;
-		font-family: "SBL Greek", serif;
+	td { 
+		vertical-align: top; 
+		text-align: left;
+		padding-right: 5%;
 	}
 
-	/* declinable */
-	:where(gr-verb, gr-noun, gr-adj, gr-num):hover {
-		padding-top: 0.5%;
-		padding-bottom: 0.5%;
-		color: white;
-	}
-	gr-verb:hover	{ background-color: rgb(192,80,70); }	/* red */
-	gr-noun:hover	{ background-color: rgb(79,129,189); }	/* blue */
-	gr-adj:hover	{ background-color: rgb(75,172,198); }	/* cyan */
-	gr-num:hover	{ background-color: rgb(128,100,162); }	/* purple */
+	.greek, .eng { font-family: "Calibri", "Noto Sans", sans-serif; }
+		
+	[class^="verb"].selected	{ color: white;	background-color: rgb(192,80,70); }		/* red */
+	[class^="noun"].selected	{ color: white;	background-color: rgb(79,129,189); }	/* blue */
+	[class^="adj"].selected		{ color: white;	background-color: rgb(75,172,198); }	/* cyan */
+	[class^="num"].selected		{ color: white;	background-color: rgb(128,100,162); }	/* purple */
 
-	/* indeclinable */
-	:where(gr-adv, gr-prep, gr-conj, gr-prt):hover {
-		padding-top: 0.5%;
-		padding-bottom: 0.5%;
-		color: black;
-	}
-	gr-adv:hover	{ background-color: rgb(214,227,188); }	/* green */
-	gr-prep:hover	{ background-color: rgb(255,255,153); }	/* yellow */
-	gr-conj:hover	{ background-color: rgb(251,212,180); }	/* orange */
-	gr-prt:hover	{ background-color: rgb(217,217,217); }	/* gray */
+	[class^="adv"].selected		{ color: black;	background-color: rgb(214,227,188); }	/* green */
+	[class^="prep"].selected	{ color: black;	background-color: rgb(255,255,153); }	/* yellow */
+	[class^="conj"].selected	{ color: black;	background-color: rgb(251,212,180); }	/* orange */
+	[class^="prt"].selected		{ color: black;	background-color: rgb(217,217,217); }	/* gray */
+
+	[class^="untr"].selected 	{ color: rgb(217,217,217); }
 
 </style>
-<title>A Greek Reader</title>
 </head>
 
 <body>
 <h1>FIRST COURSE</h1>
 <h2>I. First Declension</h2>
-<h3>1.</h3>
-<div class=greek>
-	Ἡ 
-	<gr-noun>μέθη</gr-noun> 
-	<gr-adj>μικρὰ</gr-adj> 
-	<gr-noun>μανία</gr-noun> 
-	<gr-verb>ἐστίν</gr-verb>.
-	<br>
-	<gr-adv>Πολλάκις</gr-adv> 
-	<gr-adj>βραχεῖα</gr-adj> 
-	<gr-noun>ἡδονὴ</gr-noun> 
-	<gr-adj>μακρὰν</gr-adj> 
-	<gr-verb>τίκτει</gr-verb> 
-	<gr-noun>λύπην</gr-noun>.
-	<br>
-	<gr-verb>Φίλει</gr-verb> τὴν 
-	<gr-noun>παιδείαν</gr-noun>, 
-	<gr-noun>σωφροσύνην</gr-noun>, 
-	<gr-noun>φρόνησιν</gr-noun>, 
-	<gr-noun>ἀλήθειαν</gr-noun>, 
-	<gr-noun>οἰκονομίαν</gr-noun>, 
-	<gr-noun>τέχνην</gr-noun>, 
-	<gr-noun>εὐσέβειαν</gr-noun>.
-	<br>
-	<gr-noun>Βίων</gr-noun> 
-	<gr-verb>ἔλεγε</gr-verb> τὴν 
-	<gr-noun>φιλαργυρίαν</gr-noun> 
-	<gr-verb>εἶναι</gr-verb> 
-	<gr-noun>μητρόπολιν</gr-noun> 
-	<gr-adj>πάσης</gr-adj> 
-	<gr-noun>κακίας</gr-noun>.
-	<br>
-	<gr-prt>Οὐ</gr-prt> 
-	<gr-noun>πενία</gr-noun> 
-	<gr-noun>λύπην</gr-noun> 
-	<gr-verb>ἐργάζεται</gr-verb>, 
-	<gr-conj>ἀλλ’</gr-conj> 
-	<gr-noun>ἐπιθυμία</gr-noun>.
-	<br>
-	<gr-adv>Ὡς</gr-adv> 
-	<gr-noun>συμπόσιν</gr-noun> 
-	<gr-prep>χωρὶς</gr-prep> 
-	<gr-noun>ὁμιλίας</gr-noun>,
-	<gr-adv>οὕτως</gr-adv> 
-	<gr-noun>πλοῦτος</gr-noun> 
-	<gr-prep>χωρὶς</gr-prep> 
-	<gr-noun>ἀρετῆς</gr-noun> 
-	<gr-adv>οὐδὲν</gr-adv> 
-	<gr-noun>ἡδονῆς</gr-noun> 
-	<gr-verb>ἔχει</gr-verb>.
-</div>
+<table>
+	<tr>
+		<th colspan="2"><h3>1.</h3></th>
+	</tr>
+	<tr>
+		<td class=greek>
+			<span class="noun1">Ἡ μέθη</span> 
+			<span class="adj">μικρὰ</span> 
+			<span class="noun2">μανία</span> 
+			<span class="verb">ἐστίν</span>.
+		</td>
+		<td class=eng>
+			<span class="noun1">Drunkenness</span> 
+			<span class="verb">is</span> 
+			<span class="adj">short</span> 
+			<span class="noun2">insanity</span>.
+		</td>
+	</tr>
+	<tr>
+		<td class=greek>
+			<span class="adv">Πολλάκις</span> 
+			<span class="adj1">βραχεῖα</span> 
+			<span class="noun1">ἡδονὴ</span> 
+			<span class="adj2">μακρὰν</span> 
+			<span class="verb">τίκτει</span> 
+			<span class="noun2">λύπην</span>.
+		</td>
+		<td class=eng>
+			<span class="adj1">Short</span> 
+			<span class="noun1">pleasure</span> 
+			<span class="adv">often</span> 
+			<span class="verb">begets</span> 
+			<span class="adj2">long</span> 
+			<span class="noun2">pain</span>.
+		</td>
+	</tr>
+	<tr>
+		<td class=greek>
+			<span class="verb">Φίλει</span> 
+			<span class="noun1">τὴν παιδείαν</span>, 
+			<span class="noun2">σωφροσύνην</span>, 
+			<span class="noun3">φρόνησιν</span>, 
+			<span class="noun4">ἀλήθειαν</span>, 
+			<span class="noun5">οἰκονομίαν</span>, 
+			<span class="noun6">τέχνην</span>, 
+			<span class="noun7">εὐσέβειαν</span>.
+		</td>
+		<td class=eng>
+			<span class="verb">Love</span> 
+			<span class="noun1">learning</span>, 
+			<span class="noun2">temperance</span>, 
+			<span class="noun3">prudence</span>, 
+			<span class="noun4">truth</span>, 
+			<span class="noun5">economy</span>, 
+			<span class="noun6">handicraft</span>, 
+			<span class="untr">and</span> 
+			<span class="noun7">piety</span>.
+		</td>
+	</tr>
+	<tr>
+		<td class=greek>
+			<span class="noun1">Βίων</span> 
+			<span class="verb1">ἔλεγε</span> 
+			<span class="noun2">τὴν φιλαργυρίαν</span> 
+			<span class="verb2">εἶναι</span> 
+			<span class="noun3">μητρόπολιν</span> 
+			<span class="adj">πάσης</span> 
+			<span class="noun4">κακίας</span>.
+		</td>
+		<td class=eng>
+			<span class="noun1">Bion</span> 
+			<span class="verb1">used-to-say</span>, 
+			<span class="untrans">that</span> 
+			<span class="noun2">avarice</span> 
+			<span class="verb2">was</span> 
+			<span class="noun3">the mother</span> 
+			<span class="adj">of all</span> 
+			<span class="noun4">evil</span>.
 
+		</td>
+	</tr>
+	<tr>
+		<td class=greek>
+			<span class="prt">Οὐ</span> 
+			<span class="noun1">πενία</span> 
+			<span class="noun2">λύπην</span> 
+			<span class="verb">ἐργάζεται</span>, 
+			<span class="conj">ἀλλ’</span> 
+			<span class="noun3">ἐπιθυμία</span>.
+		</td>
+		<td class=eng>
+			<span class="untr1">It is</span> 
+			<span class="prt">not</span> 
+			<span class="noun1 ">want</span> 
+			<span class="untr2">that</span> 
+			<span class="verb">causes</span> 
+			<span class="noun2">grief</span>, 
+			<span class="conj">but</span> 
+			<span class="noun3">desire</span>.
+		</td>
+	</tr>
+	<tr>
+		<td class=greek>
+			<span class="adv1">Ὡς</span> 
+			<span class="noun1">συμπόσιν</span> 
+			<span class="prep1">χωρὶς</span> 
+			<span class="noun2">ὁμιλίας</span>,
+			<span class="adv2">οὕτως</span> 
+			<span class="noun3">πλοῦτος</span> 
+			<span class="prep2">χωρὶς</span> 
+			<span class="noun4">ἀρετῆς</span> 
+			<span class="adv3">οὐδὲν</span> 
+			<span class="noun5">ἡδονῆς</span> 
+			<span class="verb">ἔχει</span>.
+		</td>
+		<td class=eng>
+			<span class="adv1">As</span> 
+			<span class="noun1">a feast</span> 
+			<span class="prep1">without</span> 
+			<span class="noun2">social conversation</span>, 
+			<span class="adv2">so</span> 
+			<span class="noun3">wealth</span> 
+			<span class="prep2">without</span> 
+			<span class="noun4">virtue</span>, 
+			<span class="verb">has</span> 
+			<span class="adv3">no</span> 
+			<span class="noun5">pleasure</span>.
+		</td>
+	</tr>
+</table>
+
+<script src="D:\jquery-3.6.0.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+	$(document).ready(function(){
+  		
+		$('.greek > span').hover(
+			function() {
+				var self = $(this);
+				var cls = self.attr('class');
+				/* create CSS selector out of class property*/
+				var selector = cls.split(/\s+/).map(cls => '.' + cls).join('');
+				self.closest('tr').find(selector).addClass('selected');
+			}, function() {
+  				$('.greek > span, .eng > span').removeClass('selected');
+			}
+		);
+
+		$('.eng > span').hover(
+			function() {
+				var self = $(this);
+				var cls = self.attr('class');
+				/* create CSS selector out of class property*/
+				var selector = cls.split(/\s+/).map(cls => '.' + cls).join('');
+				self.closest('tr').find(selector).addClass('selected');
+			}, function() {
+  				$('.eng > span, .greek > span').removeClass('selected');
+			}
+		);
+		
+	});
+</script>
 </body>
 </html>
